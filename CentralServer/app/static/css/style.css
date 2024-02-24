@@ -1,0 +1,863 @@
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+
+body{
+  
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1.5fr 10fr;
+    grid-template-rows: 80px 3fr 3fr 34px;
+    grid-template-areas: 'nav header'
+                        'nav section1'
+                        'nav section2'
+                        'footer footer';
+    font-family: Open Sans, sans-serif;
+    
+}
+
+header {
+  grid-area: header;
+  background: #5e72e4;
+  display: grid;
+  grid-template-columns: 300px 1fr 1fr 1fr 1fr 50px 50px 50px 50px 0.5fr 0.5fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'buscador item1 item2 item3 item4 item5 campana config logout user name';
+  justify-items: center;
+  align-items: center;
+  border-bottom: 0.2px solid #fdfdfd34;
+  position: sticky; /* o position: fixed; */
+  top: 0; /* ajusta según sea necesario */
+  z-index: 100; /* ajusta según sea necesario */
+}
+
+
+header input{
+  border-radius: 30px;
+  height: 45px;
+  width: 290px;
+  background: rgba(255, 255, 255, 0.87);
+  border: none;
+  text-indent: 10px;
+  font-size: 16px;
+  color: #383838b2;
+  letter-spacing: 0.5px;
+}
+header input::placeholder {
+  font-size: 16px;
+}
+
+header input:focus::placeholder {
+  color: transparent; 
+  font-size: 0; 
+}
+header input:focus {
+  border: none
+}
+
+header img{
+  height: 30px;
+  width: 30px;
+  
+}
+
+header img:hover{
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+  
+}
+
+.buscador{
+  grid-area: buscador;
+  margin-left: 55px;
+}
+.campana{
+  grid-area: campana;
+}
+.config{
+  grid-area: config;
+}
+.logout{
+  grid-area: logout;
+}
+.user img{
+  
+  height: 40px;
+  width: 40px;
+}
+.user{
+  grid-area: user;
+  justify-self: end; 
+  margin-right: 3px;
+}
+.user img:hover{
+  height: 40px;
+  width: 40px;
+  cursor: auto;
+}
+.name {
+  grid-area: name;
+  color: white;
+  font-size: 15px; 
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  justify-self: start; 
+  margin-left: 3px;
+}
+
+.item1{grid-area: item1;}
+.item2{grid-area: item2;}
+.item3{grid-area: item3;}
+.item4{grid-area: item4;}
+.item5{grid-area: item5;}
+
+
+nav {
+  grid-area: nav;
+  overflow-y: auto;
+  min-width: 250px;
+  background: rgb(255, 255, 255);
+  position: sticky; /* o position: fixed; */
+  top: 0; /* ajusta según sea necesario */
+  z-index: 100; /* ajusta según sea necesario */
+  height: 90vh; /* Ajusta la altura según tus necesidades */
+}
+
+nav::-webkit-scrollbar {
+  display: none;
+}
+
+section:nth-child(1){
+    grid-area: section1;
+}
+section:nth-child(2){
+    grid-area: section2;
+}
+
+
+footer{
+  grid-area: footer;
+  height: 40px;
+  text-align: center;
+  font-weight: 600;
+  background: #3333338e;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  justify-self: center;
+
+  padding-bottom: 5px;
+}
+
+.copyright {
+  font-size: 14px;
+}
+
+.tabla1 table,
+.tabla2 table {
+    width: 85%;
+    margin-top: 20px; 
+    margin-left: 20px;
+  }
+
+
+  .tabla1 td,
+  .tabla2 td 
+    {
+    padding: 8px;
+    color: #707070;
+    font-size: 15px; 
+    font-weight: 100;
+    letter-spacing: 1px;
+    scale: 1;
+    transition: transform 0.2s; 
+  }
+
+  .tabla1 td:hover,
+   .tabla2 td:hover 
+  {
+    cursor: pointer;
+    background: #d6d6d683;
+    color: #333;
+    font-weight: 600;
+    border-radius: 20px;
+    transform: scale(1.1);
+    transition: 0.2s;
+  }
+
+  .tabla1 td img ,
+  .tabla2 td img  
+   {
+    vertical-align: middle; 
+    margin-right: 15px; 
+    margin-left: 30px; 
+    height: 28px;
+    width: 28px;
+  }
+
+  .tabla1 th,
+   .tabla2 th {
+  color: #33333380;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 15px; 
+  text-transform: uppercase;
+  font-weight: 1000;
+  padding-bottom: 10px;
+}
+
+ .tabla1 h1,
+ .tabla2 h1{
+  text-align: center;
+  color: #020202bd;
+  font-size: 25px; 
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 5px;
+  padding-top: 20px;
+  
+}
+
+
+/* Estilo para el contenedor del scroll */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Estilo para el track del scroll (la barra) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Estilo para el thumb del scroll (la parte deslizable) */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+/* Estilo para el thumb al pasar el mouse sobre él */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Estilo para el fondo del thumb cuando se está desplazando */
+::-webkit-scrollbar-thumb:active {
+  background: #333;
+}
+
+/* Estilo para el track cuando se está desplazando */
+::-webkit-scrollbar-track-piece:active {
+  background: #999;
+}
+
+/* Agrega una sombra al thumb del scroll */
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+
+.seccion1Home img,
+.seccion1Actualidad img,
+.seccion1Contabilidad img,
+.seccion1Documentacion img{
+  height: 55px;
+  width: 55px;
+}
+
+.seccion1Home, .seccion1Trabajo{
+  background: #5e72e4;
+}
+
+.Bloques{
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 120px 120px;
+  grid-template-areas:'Bloque1 Bloque2 Bloque3 Bloque4'
+                      'Bloque5 Bloque6 Bloque7 Bloque8';
+  grid-column-gap: 30px;
+  grid-row-gap: 20px;
+}
+
+.TituloHome{
+  display: grid;
+  grid-template-columns: 80px 200px 1fr;
+}
+
+.TituloHome img{
+  height: 40px;
+  width: 40px;
+  justify-self: end;
+  align-self: center;
+}
+
+.htitulo{
+  color: rgba(255, 255, 255, 0.897);
+  text-align: left;
+  margin-left: 10px;
+  padding-top: 10px;
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 1.2px;
+  justify-self: start;
+}
+
+.infoact{
+  color: rgba(255, 255, 255, 0.897);
+  text-align: right;
+  align-self: center;
+  margin-right: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+}
+
+.Bloques .Bloque1{
+  grid-area: Bloque1;
+  margin-left: 30px;
+}
+.Bloque2{
+  grid-area: Bloque2;
+}
+.Bloque3{
+  grid-area: Bloque3;
+}
+.Bloques .Bloque4{
+  grid-area: Bloque4;
+  margin-right: 30px;
+}
+.Bloques .Bloque5{
+  grid-area: Bloque5;
+  margin-left: 30px;
+}
+.Bloque6{
+  grid-area: Bloque6;
+}
+.Bloque7{
+  grid-area: Bloque7;
+}
+
+.Bloques .Bloque8{
+  grid-area: Bloque8;
+  margin-right: 30px;
+}
+
+.blocks, .blocksA {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20px 50px 50px;
+  grid-template-areas: 'ttl img' 'val img' 'desc desc';
+  justify-items: left;
+  align-items: center;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); 
+  scale: 1;
+  transition: transform 0.5s; 
+}
+.blocks:hover{
+  transform: scale(1.1);
+  transition: 0.5s  ;
+}
+
+.blocksA:hover{
+  cursor: pointer;
+  transform: scale(1.09);
+  transition: 0.5s ease-in-out ;
+}
+
+.titulobloque{
+  grid-area: ttl;
+  color: #7c7c7cb6;
+  padding-top: 20px;
+  padding-left: 20px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.valorbloque {
+  grid-area: val;
+  color: #13113d;
+  padding-left: 20px;
+  padding-top: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Bloque1 img,
+.Bloque2 img,
+.Bloque3 img,
+.Bloque4 img,
+.Bloque5 img,
+.Bloque6 img,
+.Bloque7 img,
+.Bloque8 img,
+.Bloque9 img,
+.Bloque10 img,
+.Bloque11 img,
+.Bloque12 img  {
+  grid-area: img;
+  justify-self: end; 
+  padding-right: 15px;
+  padding-top: 10px;
+}
+
+.descbloque{
+  grid-area: desc;
+  color: #504f4fb6;
+  padding-left: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+}
+
+#seleccionVariable1 {
+  margin-top: 20px;
+  margin-left: 30px;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  /* Puedes agregar más estilos según tus preferencias */
+}
+
+#seleccionFechaHoraDesde,
+#seleccionFechaHoraHasta{
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  margin-left: 5px;
+}
+
+#Limpiar{
+  padding: 6px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  margin-left: 5px;
+  background: #5e72e4c7;
+  letter-spacing: 0.7px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#miIframe{
+  justify-self: end;
+  margin-right: 30px;
+  border-radius: 10px;
+}
+
+.blocks img,
+.blocksA img  {
+height: 50px;
+width: 50px;
+}
+
+
+.Seccion1Actualidad, .Seccion1Contabilidad{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px;
+  background: #5e72e4;
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.blocksA{
+  border: solid 1px rgba(97, 97, 97, 0.452);
+}
+
+.Bloques_Actualidad{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 110px 110px 110px 110px 110px 110px;
+  grid-template-areas:'Bloque1 Bloque2'
+                      'Bloque3 Bloque4'
+                      'Bloque5 Bloque6 '
+                      'Bloque7 Bloque8'
+                      'Bloque9 Bloque10'
+                      'Bloque11 Bloque12';
+  grid-column-gap: 30px;
+  grid-row-gap: 20px;
+}
+
+
+.Seccion2Actualidad{
+  display: grid;
+  grid-template-columns:  2fr 1fr 3fr;
+  grid-template-rows: 50px 300px 509px;
+  grid-template-areas: 'buscarCiudad . .'
+                       'descripcion mapa mapa'
+                        'pronosticohora pronosticohora pronosticodias';
+margin-top: 30px;
+margin-left: 30px;
+margin-right: 30px;
+}
+
+.descripcion{
+  grid-area: descripcion;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 50px 100px;
+  grid-template-areas: 'fechayubi_met fechayubi_met'
+                       'data_temp_met .'
+                       'data_generales_met data_generales_met';
+  
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  grid-row-gap: 20px;
+}
+
+.buscarCiudad{
+  grid-area: buscarCiudad;
+}
+
+.fechayubi_met{
+  grid-area: fechayubi_met;
+  
+}
+
+.fechayhora_met{
+  color: orange;
+}
+.data_temp_met{
+  grid-area: data_temp_met;
+  padding-left: 30px;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  justify-content: center;
+}
+.data_temp_met p{
+  font-size: 30px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.data_generales_met{
+  grid-area: data_generales_met;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20px 20px 20px;
+  border-left: solid orange 1px;
+  padding-left: 30px;
+  grid-row-gap: 5px;
+  grid-column-gap: 10px;
+}
+
+.mapa{
+  grid-area: mapa;
+}
+.pronosticohora{
+  grid-area: pronosticohora;
+  padding-top: 50px;
+  width: 700px;
+  height: 500px;
+}
+.pronosticodias{
+  grid-area: pronosticodias;
+}
+
+.data_temp_met img{
+  height: 50px;
+width: 50px;
+}
+
+.data_generales_met img{
+  height: 20px;
+width: 20px;
+}
+
+.temp_met{
+  color: #13113d;
+  padding-left: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Seccion2Actualidad input{
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  height: 45px;
+  width: 290px;
+  background: rgba(191, 201, 195, 0.63);
+  border: none;
+  text-indent: 10px;
+  font-size: 16px;
+  color: #383838de;
+  letter-spacing: 0.5px;
+}
+.Seccion2Actualidad  input::placeholder {
+  font-size: 16px;
+}
+
+.Seccion2Actualidad  input:focus::placeholder {
+  color: transparent; 
+  font-size: 0; 
+}
+.Seccion2Actualidad  input:focus {
+  border: none
+}
+
+.butonBuscarCiudad {
+  height: 47px;
+  width: 100px; 
+  background: rgb(21, 26, 23);
+  border: none;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  color: #fff; 
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease; 
+  margin-left: -4px;
+  letter-spacing: 0.5px;
+}
+
+.butonBuscarCiudad:hover {
+  background: rgba(75, 82, 77, 0.953); 
+}
+
+#map {
+  height: 300px; /* Altura del mapa */
+  width: 1000px;
+  margin-left: 50px;
+  border-radius: 10px;
+}
+
+.DiasPronostico img{
+  height: 42px;
+  width: 42px;
+
+}
+
+.DiasPronostico {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(7, 1fr); 
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 17px;
+  width: 600px;
+  
+  grid-row-gap: 5px;
+}
+
+.BlockDia{
+  display: grid;
+  grid-template-columns: 350px 50px 100px 200px;
+  text-align: center;
+  justify-items: center;
+  border: solid 1px rgba(0, 0, 0, 0.082);
+  border-radius: 10px;
+  background: #ffffff9c;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); 
+  transition: 0.5s ease-in-out;
+}
+
+.BlockDia:hover{
+  scale: 1.1;
+}
+
+
+.seccion1Trabajo .Bloques{
+  padding-top: 60px;
+  cursor: pointer;
+}
+
+.seccion1Trabajo .Bloque1 h3{
+  color: rgb(25, 226, 25)
+}
+
+.seccion1Trabajo .Bloque2 h3{ 
+  color: rgb(238, 43, 43);
+}
+.seccion1Trabajo .Bloque3 h3{
+  color: rgb(25, 226, 25)
+}
+
+
+
+.seccion1Documentacion{
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  align-items: center;
+  justify-items:center;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.seccion1Documentacion .descp{
+  margin-top: -0px;
+}
+
+.carpeta:hover{
+  scale: 1.2;
+  transition: 0,5s ease-in-out;
+  cursor: pointer;
+}
+
+
+.seccion1Perdidas,
+.seccion1Ganancias {
+  display: section1;
+  margin-top: 30px;
+  margin-left: 30px;
+  
+}
+
+
+.seccion1Perdidas input,
+.seccion1Ganancias input{
+border-radius: 10px;
+padding: 12px;
+border: solid 1px rgba(228, 212, 212, 0.534);
+background: #ece6e652;
+transition: 0.5 ease-in-out;
+}
+
+.seccion1Perdidas input:hover,
+.seccion1Ganancias input:hover,
+.seccion1Perdidas select:hover,
+.seccion1Ganancias select:hover,
+.seccion1Perdidas button:hover,
+.seccion1Ganancias button:hover{
+scale: 1.2;
+}
+
+.seccion1Perdidas input::placeholder,
+.seccion1Ganancias input::placeholder,
+.seccion1Perdidas select::placeholder,
+.seccion1Ganancias select::placeholder,
+.seccion1Perdidas button::placeholder,
+.seccion1Ganancias button::placeholder{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.7px;  
+}
+
+
+.selectorPerdidas select,
+.selectorGanancias select{
+border-radius: 10px;
+padding: 12px;
+border: solid 1px rgba(228, 212, 212, 0.534);
+background: #ece6e652;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size: 17px;
+letter-spacing: 0.7px;  
+color: #666565;
+}
+
+.selectorPerdidas button,
+.selectorGanancias button{
+border-radius: 10px;
+padding: 12px;
+border: solid 1px rgba(228, 212, 212, 0.534);
+background: #ece6e652;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+letter-spacing: 0.7px; 
+font-size: 17px;
+cursor: pointer;
+}
+
+.seccion1Perdidas img,
+.seccion1Ganancias img{
+  width: 50px;
+  height: 50px;
+  justify-self: center;
+}
+
+.selectorPerdidas, .selectorGanancias{
+  height: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 100px 1fr 1fr 1fr 70px 1fr;
+  grid-column-gap: 30px;
+  margin-right: 55px;
+}
+
+.selectorPerdidas button:hover,
+.selectorGanancias button:hover{
+  background: rgba(64, 192, 64, 0.856);
+}
+
+.seccion2Perdidas{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.seccion2Perdidas table {
+  margin-left: 30px;
+  margin-top: 30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 94.5%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.seccion2Perdidas th, .seccion2Perdidas td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 10px;
+  text-align: center;
+}
+.seccion2Perdidas th {
+  background-color: #f2f2f2;
+   text-align: center;
+}
+.seccion2Perdidas tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.seccion2Perdidas tbody tr:hover {
+  background-color: #f2f2f2;
+}
+.seccion2Perdidas input[type=checkbox] {
+  transform: scale(1.5);
+  
+}
+.seccion2Perdidas tfoot {
+  font-weight: bold;
+}
+
+
+.SeleccionAnual{
+border-radius: 10px;
+padding: 6.5px;
+border: solid 1px rgba(228, 212, 212, 0.534);
+background: #ece6e652;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size: 17px;
+letter-spacing: 0.7px;  
+color: #666565;
+}
+
+#SeleccionMesGrafica{
+  border-radius: 10px;
+  margin-left: 8px;
+  padding: 5px;
+  border: solid 1px rgba(228, 212, 212, 0.534);
+  background: #ece6e652;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.7px;  
+  color: #666565;
+}
+
+.SeleccionAnual:hover{
+cursor: pointer;
+}

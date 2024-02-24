@@ -1,0 +1,1137 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="icon" href="{% static 'imgs/favicon.ico' %}" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <title>XALLX</title>
+</head>
+<body>
+    <header> 
+      <div class="buscador">
+        <input type="text" placeholder=" 🔍  Buscar">
+      </div>
+      <div class="item1"></div>
+      <div class="item2"></div>
+      <div class="item3"></div>
+      <div class="item4"></div>
+      <div class="item5">
+        <img class="lunasol" src="{% static 'icons/luna.png'%}" alt="luna">
+      </div>
+        <div class="campana">
+          <img src="{% static 'icons/campana.png'%}" alt="campana">
+        </div>
+        <div class="config">
+          <img src="{% static 'icons/configuraciones.png'%}" alt="config">
+        </div>
+        <div class="logout">
+          <img src="{% static 'icons/logout.png'%}" alt="logout">
+        </div>
+          <div class="user">
+            <img src="{% static 'icons/perfil.png'%}" alt="perfil">
+          </div>
+          <div class="name">
+           <p>Pablo</p>
+          </div>
+          
+        
+    </header>
+
+    <nav>
+      <div class="tabla1"> 
+        <h1>xallx</h1>
+        <table>
+            <thead>
+              <tr>
+                <th>apps</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data='/Home'> <img src="{% static 'icons/home.png'%}" alt="">Inicio</td>
+              </tr>
+
+              <tr>
+                <td data='/Actualidad'> <img src="{% static 'icons/actualidad.png'%}" alt="">Actualidad</td>
+              </tr>
+        
+              <tr>
+                <td data='/Trabajo'><img src="{% static 'icons/trabajo.png'%}" alt="">Trabajo</td>
+              </tr>
+        
+              <tr>
+                <td data='/Control'><img src="{% static 'icons/control.png'%}" alt="">Control</td>
+              </tr>
+        
+              <tr>
+                <td data='/Salud'><img src="{% static 'icons/salud.png'%}" alt="">Salud</td>
+              </tr>
+        
+              <tr>
+                <td data='/Tools'><img src="{% static 'icons/tools.png'%}" alt="">Tools</td>
+              </tr>
+        
+              <tr>
+                <td data='/Chill'><img src="{% static 'icons/ocio.png'%}" alt="">Chill</td>
+              </tr>
+        
+              <tr>
+                <td data='/Personal'><img src="{% static 'icons/personal.png'%}" alt="">Personal</td>
+              </tr>
+        
+              <tr>
+                <td data='/Creador'><img src="{% static 'icons/creador.png'%}" alt="">Creador</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+        <div class="tabla2"> 
+          <table>
+            <thead>
+              <tr>
+                <th>recursos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data='https://www.youtube.com/'> <img src="{% static 'icons/youtube.png'%}" alt="">YouTube</td>
+              </tr>
+        
+              <tr>
+                <td data='https://www.twitch.tv/'><img src="{% static 'icons/twitch.png'%}" alt="">Twitch</td>
+              </tr>
+
+              <tr>
+                <td data='https://www.netflix.com/browse'> <img src="{% static 'icons/netflix.png'%}" alt="">Netflix</td>
+              </tr>
+        
+              <tr>
+                <td data='https://chat.openai.com/'><img src="{% static 'icons/ia.png'%}" alt="">ChatGPT</td>
+              </tr>
+
+              <tr>
+                <td data='https://github.com/ppp-toro'> <img src="{% static 'icons/github.png'%}" alt="">GitHub</td>
+              </tr>
+
+              <tr>
+                <td data='https://www.linkedin.com/in/pablo-rebollo-toro-249237269/'><img src="{% static 'icons/linkedin.png'%}" alt="">Linkedin</td>
+              </tr>
+        
+              <tr>
+                <td data='https://excalidraw.com/'><img src="{% static 'icons/excalidraw.png'%}" alt="">Excalidraw</td>
+              </tr>
+
+              <tr>
+                <td data='https://www.w3schools.com/'><img src="{% static 'icons/w3schools.png'%}" alt="">W3Schools</td>
+              </tr>
+
+              <tr>
+                <td data='https://www.primevideo.com/'><img src="{% static 'icons/primevideo.png'%}" alt="">Prime Video</td>
+              </tr>
+
+              <tr>
+                <td data='https://gaming.amazon.com/home'><img src="{% static 'icons/corona.png'%}" alt="">Prime Gaming</td>
+              </tr>
+
+              <tr>
+                <td data='https://twitter.com/?lang=es'><img src="{% static 'icons/twitter.png'%}" alt="">Twitter</td>
+              </tr>
+
+              <tr>
+                <td data='https://www.tiktok.com/@flamencoole'><img src="{% static 'icons/tiktok.png'%}" alt="">TikTok</td>
+              </tr>
+
+              <tr>
+                <td data='https://www.instagram.com/'><img src="{% static 'icons/instagram.png'%}" alt="">Instagram</td>
+              </tr>
+
+              
+            </tbody>
+          </table>
+        </div>
+    </nav>
+
+{%block Home%}
+    <section class="seccion1Home">
+      <aside class="TituloHome">
+        <img src="{% static 'icons/home.png'%}" alt="">
+        <h2 class="htitulo">Inicio</h2>
+        <p class="infoact">03/02/2024, 04:08 - España, Extremadura</p>
+      </aside>
+      <div class="Bloques">
+
+        <aside class="Bloque1 blocks">
+          <h4 class="titulobloque">Subida del IPC</h4>
+          <h3 class="valorbloque">23%</h3>
+          <img src="{% static 'icons/Actualidad.png'%}" alt="">
+          <p class="descbloque">Última vez aztualizado 22:24 - 02/02/2024</p>
+        </aside>
+
+        <aside class="Bloque2 blocks">
+          <h4 class="titulobloque">Etiquetado</h4>
+          <h3 class="valorbloque">56%</h3>
+          <img src="{% static 'icons/Trabajo.png'%}" alt="">
+          <p class="descbloque">Última vez aztualizado 22:24 - 02/02/2024</p>
+        </aside>
+
+        <aside class="Bloque3 blocks">
+          <h4 class="titulobloque">Temperatura CEO</h4>
+          <h3 class="valorbloque">24ºC</h3>
+          <img src="{% static 'icons/Control.png'%}" alt="">
+          <p class="descbloque">Última vez aztualizado 22:24 - 02/02/2024</p>
+        </aside>
+
+        <aside class="Bloque4 blocks">
+          <h4 class="titulobloque">Últ. Entrenamiento</h4>
+          <h3 class="valorbloque">80%</h3>
+          <img src="{% static 'icons/Salud.png'%}" alt="">
+          <p class="descbloque">Última vez aztualizado 22:24 - 02/02/2024</p>
+        </aside>
+
+        <aside class="Bloque5 blocks">
+          <h4 class="titulobloque">Calculadora</h4>
+          <h3 class="valorbloque">13%</h3>
+          <img src="{% static 'icons/Tools.png'%}" alt="">
+          <p class="descbloque">Última vez aztualizado 22:24 - 02/02/2024</p>
+        </aside>
+
+        <aside class="Bloque6 blocks">
+          <h4 class="titulobloque">Tres en raya</h4>
+          <h3 class="valorbloque">89%</h3>
+          <img src="{% static 'icons/Ocio.png'%}" alt="">
+          <p class="descbloque">Última vez aztualizado 22:24 - 02/02/2024</p>
+        </aside>
+ 
+        <aside class="Bloque7 blocks">
+          <h4 class="titulobloque">Productividad</h4>
+          <h3 class="valorbloque">120%</h3>
+          <img src="{% static 'icons/Personal.png'%}" alt="">
+          <p class="descbloque">Última vez aztualizado 22:24 - 02/02/2024</p>
+        </aside>
+        
+        <aside class="Bloque8 blocks">
+          <h4 class="titulobloque">progreso app</h4>
+          <h3 class="valorbloque">0.00001%</h3>
+          <img src="{% static 'icons/Creador.png'%}" alt="">
+          <p class="descbloque">Última vez aztualizado 22:24 - 02/02/2024</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="seccion2Home">
+      <select id="seleccionVariable1">
+        <option value="1">Variable 1</option>
+        <option value="2">Variable 2</option>
+        <option value="3">Variable 3</option>
+        <option value="4">Variable 4</option>
+        <option value="5">Variable 5</option>
+        <option value="6">Variable 6</option>
+        <option value="7">Variable 7</option>
+        <option value="8">Variable 8</option>
+        <option value="9">Variable 9</option>
+        <option value="10">Variable 10</option>
+        <option value="11">Variable 11</option>
+        <option value="12">Variable 12</option>
+        <option value="13">Variable 13</option>
+        <option value="14">Variable 14</option>
+        <option value="15">Variable 15</option>
+        <option value="16">Variable 16</option>
+        <option value="17">Variable 17</option>
+        <option value="18">Variable 18</option>
+        <option value="19">Variable 19</option>
+        <option value="20">Variable 20</option>
+        <option value="21">Variable 21</option>
+        <option value="22">Variable 22</option>
+        <option value="23">Variable 23</option>
+        <option value="24">Variable 24</option>
+        <option value="25">Variable 25</option>
+        <option value="26">Variable 26</option>
+        <option value="27">Variable 27</option>
+        <option value="28">Variable 28</option>
+        <option value="29">Variable 29</option>
+        <option value="30">Variable 30</option>
+    </select>
+       <input type="datetime-local" id="seleccionFechaHoraDesde" >
+       <input type="datetime-local" id="seleccionFechaHoraHasta" >
+       <button id="Limpiar"> Limpiar </button>
+        <canvas style=" width: 1600px; height: 300px; margin-top: 10px; margin-left: 30px; margin-right: 30px;" id="miGrafica"></canvas>
+      
+    </section>
+{%endblock%}
+
+{%block Actualidad%}
+<section class="Seccion1Actualidad">
+  <div class="Bloques_Actualidad">
+      <aside class="Bloque1 blocksA" data-src="https://www.elpais.com">
+          <h4 class="titulobloque">El País</h4>
+          <h3 class="valorbloque">23%</h3>
+          <img src="{% static 'icons/periodico.png'%}" alt="">
+          <p class="descbloque">Última vez actualizado 22:24 - 02/02/2024</p>
+      </aside>
+
+      <aside class="Bloque2 blocksA" data-src="https://www.20minutos.es">
+          <h4 class="titulobloque">20 Minutos</h4>
+          <h3 class="valorbloque">56%</h3>
+          <img src="{% static 'icons/periodico.png'%}" alt="">
+          <p class="descbloque">Última vez actualizado 22:24 - 02/02/2024</p>
+      </aside>
+
+      <aside class="Bloque3 blocksA" data-src="https://www.elmundo.es">
+          <h4 class="titulobloque">El Mundo</h4>
+          <h3 class="valorbloque">24ºC</h3>
+          <img src="{% static 'icons/periodico.png'%}" alt="">
+          <p class="descbloque">Última vez actualizado 22:24 - 02/02/2024</p>
+      </aside>
+
+      <aside class="Bloque4 blocksA" data-src="https://www.hoy.es/">
+          <h4 class="titulobloque">El Hoy</h4>
+          <h3 class="valorbloque">80%</h3>
+          <img src="{% static 'icons/periodico.png'%}" alt="">
+          <p class="descbloque">Última vez actualizado 22:24 - 02/02/2024</p>
+      </aside>
+
+      <aside class="Bloque5 blocksA" data-src="https://www.abc.es">
+          <h4 class="titulobloque">ABC</h4>
+          <h3 class="valorbloque">13%</h3>
+          <img src="{% static 'icons/periodico.png'%}" alt="">
+          <p class="descbloque">Última vez actualizado 22:24 - 02/02/2024</p>
+      </aside>
+
+      <aside class="Bloque6 blocksA" data-src="https://www.elespanol.com">
+          <h4 class="titulobloque">El Español</h4>
+          <h3 class="valorbloque">89%</h3>
+          <img src="{% static 'icons/periodico.png'%}" alt="">
+          <p class="descbloque">Última vez actualizado 22:24 - 02/02/2024</p>
+      </aside>
+
+      <aside class="Bloque7 blocksA" data-src="https://www.antena3.com/noticias/">
+          <h4 class="titulobloque">Antena 3</h4>
+          <h3 class="valorbloque">120%</h3>
+          <img src="{% static 'icons/periodico.png'%}" alt="">
+          <p class="descbloque">Última vez actualizado 22:24 - 02/02/2024</p>
+      </aside>
+      
+      <aside class="Bloque8 blocksA" data-src="https://www.cuatro.com/">
+          <h4 class="titulobloque">Cuatro</h4>
+          <h3 class="valorbloque">0.00001%</h3>
+          <img src="{% static 'icons/periodico.png'%}" alt="">
+          <p class="descbloque">Última vez actualizado 22:24 - 02/02/2024</p>
+      </aside>
+
+      <aside class="Bloque9 blocksA" data-src="https://www.rtve.es/noticias/">
+          <h4 class="titulobloque">RTVE</h4>
+          <h3 class="valorbloque">13%</h3>
+          <img src="{% static 'icons/periodico.png'%}" alt="">
+          <p class="descbloque">Última vez actualizado 22:24 - 02/02/2024</p>
+      </aside>
+
+      <aside class="Bloque10 blocksA" data-src="https://www.lasexta.com/noticias/">
+          <h4 class="titulobloque">La Sexta</h4>
+          <h3 class="valorbloque">89%</h3>
+          <img src="{% static 'icons/periodico.png'%}" alt="">
+          <p class="descbloque">Última vez actualizado 22:24 - 02/02/2024</p>
+      </aside>
+
+      <aside class="Bloque11 blocksA" data-src="https://www.marca.com">
+          <h4 class="titulobloque">Marca</h4>
+          <h3 class="valorbloque">120%</h3>
+          <img src="{% static 'icons/periodico.png'%}" alt="">
+          <p class="descbloque">Última vez actualizado 22:24 - 02/02/2024</p>
+      </aside>
+      
+      <aside class="Bloque12 blocksA" data-src="https://www.mundodeportivo.com">
+          <h4 class="titulobloque">Mundo Deportivo</h4>
+          <h3 class="valorbloque">0.00001%</h3>
+          <img src="{% static 'icons/periodico.png'%}" alt="">
+          <p class="descbloque">Última vez actualizado 22:24 - 02/02/2024</p>
+      </aside>
+  </div>
+  <iframe id="miIframe" frameborder="0" width="820" height="765"></iframe>
+
+</section>
+<section class="Seccion2Actualidad">
+
+  <div class="buscarCiudad">
+    <input type="text"  placeholder=" 🔍  Buscar Ciudad"  id="location" name="location" onkeydown="if(event.keyCode==13) buscarCiudad_Mapa()">
+    <button class="butonBuscarCiudad" type="submit" onclick="buscarCiudad_Mapa()"> Buscar</button>
+  </div>
+
+    <aside class="descripcion">
+      <div class="fechayubi_met">
+        <p class="fechayhora_met">5 de febrero, 12:26 p.m.</p>
+        <h2 class="ubicacion_met">Londres, GB</h2>
+        <p class="sensacion_met">La sensación es de 10°C. Nubes rotas. Brisa fresca</p>
+      </div>
+
+      <div class="data_temp_met">
+        <img src="{% static 'icons/nube.png'%}" alt="">
+        <p class="temp_met">11ºC</p>
+      </div>
+
+      <div class="data_generales_met">
+
+        <div class="data_viento_met">
+          <p class="viento_met">9,8 m/s en dirección oeste</p>
+        </div>
+
+        <div class="data_pascal_met">
+          <p class="pascal_met">1019hPa</p>
+        </div>
+
+        <div class="data_humedad_met">
+          <p class="humedad_met">Humedad: <span  class="val_humedad_met">75%</span> </p>
+        </div>
+
+        <div class="data_rayos_met">
+          <p class="rayos_met">rayos ultravioleta: <span class="val_rayos_met">1</span></p>
+        </div>
+
+        <div class="data_rocio_met">
+          <p class="rocio_met">Punto de rocío: <span class="val_rocio_met">7ºC</span></p>
+        </div>
+
+        <div class="data_visibilidad_met">
+          <p class="visibilidad_met">Visibilidad: <span class="val_visibilidad_met">10,0 kilómetros</span></p>
+        </div>
+
+      </div>
+
+    </aside>
+
+    <aside class="mapa">
+        <div id="map"></div>
+    </aside>
+
+    <aside class="pronosticohora">
+      <canvas id="pronostico" height="180"></canvas>
+
+    </aside>
+
+    <aside class="pronosticodias">
+    <br><br>
+      <div class="DiasPronostico">
+    
+        <div class="BlockDia d1">
+          <p>Lunes, Febrero 09</p>
+          <img src="{% static 'icons/nube.png'%}" alt="">
+          <p>12/10 ºC</p>
+          <p>Lluvia moderada</p>
+        </div>
+    
+        <div class="BlockDia d2">
+          <p>Martes, Febrero 10</p>
+          <img src="{% static 'icons/sol.png'%}" alt="">
+          <p>15/9 ºC</p>
+          <p>Soleado</p>
+        </div>
+    
+        <div class="BlockDia d3">
+          <p>Miércoles, Febrero 11</p>
+          <img src="{% static 'icons/nube.png'%}" alt="">
+          <p>11/8 ºC</p>
+          <p>LLuvia ligera</p>
+        </div>
+    
+        <div class="BlockDia d4">
+          <p>Jueves, Febrero 12</p>
+          <img src="{% static 'icons/nube.png'%}" alt="">
+          <p>13/11 ºC</p>
+          <p>Nublado</p>
+        </div>
+    
+        <div class="BlockDia d5">
+          <p>Viernes, Febrero 13</p>
+          <img src="{% static 'icons/nube.png'%}" alt="">
+          <p>5/3 ºC</p>
+          <p>Nieve</p>
+        </div>
+    
+        <div class="BlockDia d6">
+          <p>Sábado, Febrero 14</p>
+          <img src="{% static 'icons/sol.png'%}" alt="">
+          <p>18/12 ºC</p>
+          <p>Soleado</p>
+        </div>
+    
+        <div class="BlockDia d7">
+          <p>Domingo, Febrero 15</p>
+          <img src="{% static 'icons/nube.png'%}" alt="">
+          <p>14/10 ºC</p>
+          <p>Nublado con lluvia</p>
+        </div>
+    
+      </div>
+    </aside>
+
+</section>
+{%endblock%}
+
+{%block Trabajo%}
+<section class="seccion1Trabajo">
+  <div class="Bloques BloquesTrabajo">
+
+    <aside class="Bloque1 blocks" data-url="/Contabilidad">
+      <h4 class="titulobloque">Contabilidad</h4>
+      <h3 class="valorbloque">+3.120,24€</h3>
+      <img src="{% static 'icons/banco.png'%}" alt="">
+      <p class="descbloque">Última vez aztualizado 22:24 - 02/02/2024</p>
+    </aside>
+
+    <aside class="Bloque2 blocks" data-url="/Perdidas">
+      <h4 class="titulobloque">Pérdidas</h4>
+      <h3 class="valorbloque">2.365,84€</h3>
+      <img src="{% static 'icons/perdida.png'%}" alt="">
+      <p class="descbloque">Última vez aztualizado 22:24 - 02/02/2024</p>
+    </aside>
+
+    <aside class="Bloque3 blocks" data-url="/Ganancias">
+      <h4 class="titulobloque">Ganancias</h4>
+      <h3 class="valorbloque">4.691,57€</h3>
+      <img src="{% static 'icons/ganancias.png'%}" alt="">
+      <p class="descbloque">Última vez aztualizado 22:24 - 02/02/2024</p>
+    </aside>
+
+    <aside class="Bloque4 blocks" data-url="/Trazabilidad">
+      <h4 class="titulobloque">Trazabilidad</h4>
+      <h3 class="valorbloque">80%</h3>
+      <img src="{% static 'icons/trazabilidad.png'%}" alt="">
+      <p class="descbloque">Última vez aztualizado 22:24 - 02/02/2024</p>
+    </aside>
+
+    <aside class="Bloque5 blocks" data-url="/Proyectos">
+      <h4 class="titulobloque">Proyectos</h4>
+      <h3 class="valorbloque">13%</h3>
+      <img src="{% static 'icons/proyectos.png'%}" alt="">
+      <p class="descbloque">Última vez aztualizado 22:24 - 02/02/2024</p>
+    </aside>
+
+    <aside class="Bloque6 blocks" data-url="/Progreso">
+      <h4 class="titulobloque">En Progreso</h4>
+      <h3 class="valorbloque">89%</h3>
+      <img src="{% static 'icons/progreso.png'%}" alt="">
+      <p class="descbloque">Última vez aztualizado 22:24 - 02/02/2024</p>
+    </aside>
+
+    <aside class="Bloque7 blocks" data-url="/Documentacion">
+      <h4 class="titulobloque">Documentación</h4>
+      <h3 class="valorbloque">120%</h3>
+      <img src="{% static 'icons/documentacion.png'%}" alt="">
+      <p class="descbloque">Última vez aztualizado 22:24 - 02/02/2024</p>
+    </aside>
+    
+    <aside class="Bloque8 blocks" data-url="/Calendario">
+      <h4 class="titulobloque">Calendario</h4>
+      <h3 class="valorbloque">0.00001%</h3>
+      <img src="{% static 'icons/calendario.png'%}" alt="">
+      <p class="descbloque">Última vez aztualizado 22:24 - 02/02/2024</p>
+    </aside>
+  </div>
+</section>
+<section class="seccion2Trabajo">
+  <select id="seleccionVariable1">
+    <option value="1">Variable 1</option>
+    <option value="2">Variable 2</option>
+    <option value="3">Variable 3</option>
+    <option value="4">Variable 4</option>
+    <option value="5">Variable 5</option>
+    <option value="6">Variable 6</option>
+    <option value="7">Variable 7</option>
+    <option value="8">Variable 8</option>
+    <option value="9">Variable 9</option>
+    <option value="10">Variable 10</option>
+    <option value="11">Variable 11</option>
+    <option value="12">Variable 12</option>
+    <option value="13">Variable 13</option>
+    <option value="14">Variable 14</option>
+    <option value="15">Variable 15</option>
+    <option value="16">Variable 16</option>
+    <option value="17">Variable 17</option>
+    <option value="18">Variable 18</option>
+    <option value="19">Variable 19</option>
+    <option value="20">Variable 20</option>
+    <option value="21">Variable 21</option>
+    <option value="22">Variable 22</option>
+    <option value="23">Variable 23</option>
+    <option value="24">Variable 24</option>
+    <option value="25">Variable 25</option>
+    <option value="26">Variable 26</option>
+    <option value="27">Variable 27</option>
+    <option value="28">Variable 28</option>
+    <option value="29">Variable 29</option>
+    <option value="30">Variable 30</option>
+</select>
+   <input type="datetime-local" id="seleccionFechaHoraDesde" >
+   <input type="datetime-local" id="seleccionFechaHoraHasta" >
+   <button id="Limpiar"> Limpiar </button>
+    <canvas style=" width: 1600px; height: 300px; margin-top: 10px; margin-left: 30px; margin-right: 30px;" id="GraficaTrabajo"></canvas>
+  
+</section>
+{%endblock%}
+
+{%block Contabilidad%}
+    <section class="Seccion1Contabilidad">
+      <div class="Bloques_Actualidad">
+        <aside class="Bloque1 blocksA" data-src="https://www.elpais.com">
+            <h4 class="titulobloque">PayPal</h4>
+            <h3 class="valorbloque">80,34€</h3>
+            <img src="{% static 'icons/banco.png'%}" alt="">
+            <p class="descbloque">Última vez actualizado 22:24 - 02/02/2024</p>
+        </aside>
+  
+        <aside class="Bloque2 blocksA" data-src="https://www.20minutos.es">
+            <h4 class="titulobloque">Banca Pueyo</h4>
+            <h3 class="valorbloque">24,31€</h3>
+            <img src="{% static 'icons/banco.png'%}" alt="">
+            <p class="descbloque">Última vez actualizado 22:24 - 02/02/2024</p>
+        </aside>
+  
+        <aside class="Bloque3 blocksA" data-src="https://www.elmundo.es">
+            <h4 class="titulobloque">Santander</h4>
+            <h3 class="valorbloque">31,34€</h3>
+            <img src="{% static 'icons/banco.png'%}" alt="">
+            <p class="descbloque">Última vez actualizado 22:24 - 02/02/2024</p>
+        </aside>
+  
+        <aside class="Bloque4 blocksA" data-src="https://www.hoy.es/">
+            <h4 class="titulobloque">Caja Rural</h4>
+            <h3 class="valorbloque">101,12€</h3>
+            <img src="{% static 'icons/banco.png'%}" alt="">
+            <p class="descbloque">Última vez actualizado 22:24 - 02/02/2024</p>
+        </aside>
+  
+        <aside class="Bloque5 blocksA" data-src="https://www.abc.es">
+            <h4 class="titulobloque">Abanca</h4>
+            <h3 class="valorbloque">14,23€</h3>
+            <img src="{% static 'icons/banco.png'%}" alt="">
+            <p class="descbloque">Última vez actualizado 22:24 - 02/02/2024</p>
+        </aside>
+  
+        <aside class="Bloque6 blocksA" data-src="https://www.elespanol.com">
+            <h4 class="titulobloque">BBVA</h4>
+            <h3 class="valorbloque">25,05€</h3>
+            <img src="{% static 'icons/banco.png'%}" alt="">
+            <p class="descbloque">Última vez actualizado 22:24 - 02/02/2024</p>
+        </aside>
+  
+        <aside class="Bloque7 blocksA" data-src="https://www.antena3.com/noticias/">
+            <h4 class="titulobloque">Caixa Bank</h4>
+            <h3 class="valorbloque">120,12€</h3>
+            <img src="{% static 'icons/banco.png'%}" alt="">
+            <p class="descbloque">Última vez actualizado 22:24 - 02/02/2024</p>
+        </aside>
+        
+        <aside class="Bloque8 blocksA" data-src="https://www.cuatro.com/">
+            <h4 class="titulobloque">Caja Extremadura</h4>
+            <h3 class="valorbloque">14,25€</h3>
+            <img src="{% static 'icons/banco.png'%}" alt="">
+            <p class="descbloque">Última vez actualizado 22:24 - 02/02/2024</p>
+        </aside>
+  
+        <aside class="Bloque9 blocksA" data-src="https://www.rtve.es/noticias/">
+            <h4 class="titulobloque">Sabadell</h4>
+            <h3 class="valorbloque">45,34€</h3>
+            <img src="{% static 'icons/banco.png'%}" alt="">
+            <p class="descbloque">Última vez actualizado 22:24 - 02/02/2024</p>
+        </aside>
+  
+        <aside class="Bloque10 blocksA" data-src="https://www.lasexta.com/noticias/">
+            <h4 class="titulobloque">ING</h4>
+            <h3 class="valorbloque">24,25€</h3>
+            <img src="{% static 'icons/banco.png'%}" alt="">
+            <p class="descbloque">Última vez actualizado 22:24 - 02/02/2024</p>
+        </aside>
+  
+        <aside class="Bloque11 blocksA" data-src="https://www.marca.com">
+            <h4 class="titulobloque">OpenBank</h4>
+            <h3 class="valorbloque">12,51€</h3>
+            <img src="{% static 'icons/banco.png'%}" alt="">
+            <p class="descbloque">Última vez actualizado 22:24 - 02/02/2024</p>
+        </aside>
+        
+        <aside class="Bloque12 blocksA" data-src="https://www.mundodeportivo.com">
+            <h4 class="titulobloque">Cofidiss</h4>
+            <h3 class="valorbloque">21,34€</h3>
+            <img src="{% static 'icons/banco.png'%}" alt="">
+            <p class="descbloque">Última vez actualizado 22:24 - 02/02/2024</p>
+        </aside>
+    </div>
+    <iframe id="miIframe" frameborder="0" width="820" height="765"></iframe>
+  
+    </section>
+    <section>
+        <h1> Seccion 2 Contabilidad</h1>
+    </section>
+{%endblock%}
+
+{%block Perdidas%}
+    <section class="seccion1Perdidas">
+      <div class="selectorPerdidas">
+
+     
+        <input type="text" class="proveedor" placeholder="Proveedor">
+        <!-- Campo para crear o editar  proveedor -->
+        <input type="datetime-local" class="fechafacturacompra" placeholder="Fecha Factura">
+        <select id="idfactura">
+          <option value="1">AA</option>
+          <option value="2">AB</option>
+          <option value="3">AC</option>
+          <option value="4">AD</option>
+          <option value="5">BA</option>
+          <option value="6">BB</option>
+          <option value="7">BC</option>
+          <option value="8">BD</option>
+          <option value="9">CA</option>
+          <option value="10">CB</option>
+      </select>
+        <input type="text" class="nfacturacompra" placeholder="Nº Factura">
+        <select id="formapagocompra">
+          <option value="1">Variable 1</option>
+          <option value="2">Variable 2</option>
+          <option value="3">Variable 3</option>
+          <option value="4">Variable 4</option>
+          <option value="5">Variable 5</option>
+          <option value="6">Variable 6</option>
+          <option value="7">Variable 7</option>
+          <option value="8">Variable 8</option>
+          <option value="9">Variable 9</option>
+          <option value="10">Variable 10</option>
+      </select>
+        
+        <!-- Campo para crear o editar forma de pago -->
+
+        <input type="number" class="importepagocompra" placeholder="Importe €">
+        
+        <img src="{% static 'icons/advertencia.png'%}" alt="">
+        <button class="confirmarAccion"> Confirmar</button>
+      </div>
+      <br>
+      <button class="SeleccionAnual"> Anual</button>
+      <select id="SeleccionMesGrafica">
+        <option value="1">Enero</option>
+        <option value="2">Febrero</option>
+        <option value="3">Marzo</option>
+        <option value="4">Abril</option>
+        <option value="5">Mayo</option>
+        <option value="6">Junio</option>
+        <option value="7">Julio</option>
+        <option value="8">Agosto</option>
+        <option value="9">Septiembre</option>
+        <option value="10">Octubre</option>
+        <option value="11">Noviembre</option>
+        <option value="12">Diciembre</option>
+    </select>
+      <canvas style=" width: 1400px; height: 300px; margin-top: -20px; margin-left: -10px; margin-right: 30px;" id="GraficaPerdidas"></canvas>
+   
+    </section>
+    <section class="seccion2Perdidas">
+      <br> <br> <br>
+      <table>
+        <thead>
+            <tr>
+                <th>Fecha y Hora</th>
+                <th>Proveedor</th>
+                <th>Índice Factura</th>
+                <th>Nº Factura</th>
+                <th>Estado Pago</th>
+                <th>Importe €</th>
+                <th>Check Pago</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2024-02-14 09:00</td>
+                <td>Proveedor A</td>
+                <td>001</td>
+                <td>123456</td>
+                <td>Pago Pendiente</td>
+                <td>100.00</td>
+                <td style=" text-align: center;"><input type="checkbox"></td>
+            </tr>
+
+            <tr>
+              <td>2024-02-14 09:00</td>
+              <td>Proveedor A</td>
+              <td>001</td>
+              <td>123456</td>
+              <td>Pago Pendiente</td>
+              <td>100.00</td>
+              <td style=" text-align: center;"><input type="checkbox"></td>
+          </tr>
+
+          <tr>
+            <td>2024-02-14 09:00</td>
+            <td>Proveedor A</td>
+            <td>001</td>
+            <td>123456</td>
+            <td>Pago Pendiente</td>
+            <td>100.00</td>
+            <td style=" text-align: center;"><input type="checkbox"></td>
+        </tr>
+
+        <tr>
+          <td>2024-02-14 09:00</td>
+          <td>Proveedor A</td>
+          <td>001</td>
+          <td>123456</td>
+          <td>Pago Pendiente</td>
+          <td>100.00</td>
+          <td style=" text-align: center;"><input type="checkbox"></td>
+      </tr>
+
+      <tr>
+        <td>2024-02-14 09:00</td>
+        <td>Proveedor A</td>
+        <td>001</td>
+        <td>123456</td>
+        <td>Pago Pendiente</td>
+        <td>100.00</td>
+        <td style=" text-align: center;"><input type="checkbox"></td>
+    </tr>
+
+    <tr>
+      <td>2024-02-14 09:00</td>
+      <td>Proveedor A</td>
+      <td>001</td>
+      <td>123456</td>
+      <td>Pago Pendiente</td>
+      <td>100.00</td>
+      <td style=" text-align: center;"><input type="checkbox"></td>
+  </tr>
+
+  <tr>
+    <td>2024-02-14 09:00</td>
+    <td>Proveedor A</td>
+    <td>001</td>
+    <td>123456</td>
+    <td>Pago Pendiente</td>
+    <td>100.00</td>
+    <td style=" text-align: center;"><input type="checkbox"></td>
+</tr>
+
+<tr>
+  <td>2024-02-14 09:00</td>
+  <td>Proveedor A</td>
+  <td>001</td>
+  <td>123456</td>
+  <td>Pago Pendiente</td>
+  <td>100.00</td>
+  <td style=" text-align: center;"><input type="checkbox"></td>
+</tr>
+
+<tr>
+<td>2024-02-14 09:00</td>
+<td>Proveedor A</td>
+<td>001</td>
+<td>123456</td>
+<td>Pago Pendiente</td>
+<td>100.00</td>
+<td style=" text-align: center;"><input type="checkbox"></td>
+</tr>
+
+<tr>
+<td>2024-02-14 09:00</td>
+<td>Proveedor A</td>
+<td>001</td>
+<td>123456</td>
+<td>Pago Pendiente</td>
+<td>100.00</td>
+<td style=" text-align: center;"><input type="checkbox"></td>
+</tr>
+
+<tr>
+<td>2024-02-14 09:00</td>
+<td>Proveedor A</td>
+<td>001</td>
+<td>123456</td>
+<td>Pago Pendiente</td>
+<td>100.00</td>
+<td style=" text-align: center;"><input type="checkbox"></td>
+</tr>
+
+<tr>
+<td>2024-02-14 09:00</td>
+<td>Proveedor A</td>
+<td>001</td>
+<td>123456</td>
+<td>Pago Pendiente</td>
+<td>100.00</td>
+<td style=" text-align: center;"><input type="checkbox"></td>
+</tr>
+
+
+        </tbody>
+        <tfoot>
+          <tr>
+              <td colspan="5">TOTAL</td>
+              <td>600.00</td>
+              <td style=" text-align: center;"><input type="checkbox"></td>
+          </tr>
+      </tfoot>
+    </table>
+    </section>
+{%endblock%}
+
+{%block Ganancias%}
+    <section class="seccion1Ganancias">
+      <div class="selectorGanancias">
+
+
+      
+      <input type="text" class="cliente" placeholder="Cliente">
+      <!-- Campo para crear o editar  proveedor -->
+      <input type="datetime-local" class="fechafacturaventa" placeholder="Fecha Factura">
+      <select id="idfactura">
+        <option value="1">AA</option>
+        <option value="2">AB</option>
+        <option value="3">AC</option>
+        <option value="4">AD</option>
+        <option value="5">BA</option>
+        <option value="6">BB</option>
+        <option value="7">BC</option>
+        <option value="8">BD</option>
+        <option value="9">CA</option>
+        <option value="10">CB</option>
+    </select>
+      <input type="text" class="nfacturaventa" placeholder="Nº Factura">
+      <select id="formapagoventa">
+        <option value="1">Variable 1</option>
+        <option value="2">Variable 2</option>
+        <option value="3">Variable 3</option>
+        <option value="4">Variable 4</option>
+        <option value="5">Variable 5</option>
+        <option value="6">Variable 6</option>
+        <option value="7">Variable 7</option>
+        <option value="8">Variable 8</option>
+        <option value="9">Variable 9</option>
+        <option value="10">Variable 10</option>
+    </select>
+      
+      <!-- Campo para crear o editar forma de pago -->
+
+      <input type="number" class="importepagoventa" placeholder="Importe €">
+      <img src="{% static 'icons/advertencia.png'%}" alt="">
+      <button class="confirmarAccion"> Confirmar</button>
+    </div>
+    </section>
+    <section>
+        <h1> Seccion 2 Ganancias</h1>
+    </section>
+{%endblock%}
+
+{%block Trazabilidad%}
+    <section>
+        <h1> Seccion 1 Trazabilidad</h1>
+    </section>
+    <section>
+        <h1> Seccion 2 Trazabilidad</h1>
+    </section>
+{%endblock%}
+
+{%block Proyectos%}
+    <section>
+        <h1> Seccion 1 Proyectos</h1>
+    </section>
+    <section>
+        <h1> Seccion 2 Proyectos</h1>
+    </section>
+{%endblock%}
+
+{%block Progreso%}
+    <section>
+        <h1> Seccion 1 Progreso</h1>
+    </section>
+    <section>
+        <h1> Seccion 2 Progreso</h1>
+    </section>
+{%endblock%}
+
+{%block Documentacion%}
+    <section class="seccion1Documentacion">
+        
+      <div class="carpeta cp1">
+        <img src="{% static 'icons/carpeta.png'%}" alt="">
+        <p class="descp">Tutoriales</p>
+      </div>
+
+      <div class="carpeta cp2">
+        <img src="{% static 'icons/carpeta.png'%}" alt="">
+        <p class="descp">Obras</p>
+      </div>
+
+      <div class="carpeta cp3">
+        <img src="{% static 'icons/carpeta.png'%}" alt="">
+        <p class="descp">Memorias</p>
+      </div>
+
+      <div class="carpeta cp4">
+        <img src="{% static 'icons/carpeta.png'%}" alt="">
+        <p class="descp">Estudios</p>
+      </div>
+
+      <div class="carpeta cp5">
+        <img src="{% static 'icons/carpeta.png'%}" alt="">
+        <p class="descp">Ejecución</p>
+      </div>
+
+      <div class="carpeta cp6">
+        <img src="{% static 'icons/carpeta.png'%}" alt="">
+        <p class="descp">Empresas</p>
+      </div>
+
+      <div class="carpeta cp7">
+        <img src="{% static 'icons/carpeta.png'%}" alt="">
+        <p class="descp">Herramientas</p>
+      </div>
+
+      <div class="carpeta cp8">
+        <img src="{% static 'icons/carpeta.png'%}" alt="">
+        <p class="descp">Servicios</p>
+      </div>
+
+      <div class="carpeta cp9">
+        <img src="{% static 'icons/carpeta.png'%}" alt="">
+        <p class="descp">Softwares</p>
+      </div>
+
+      <div class="carpeta cp10">
+        <img src="{% static 'icons/carpeta.png'%}" alt="">
+        <p class="descp">Instaladores</p>
+      </div>
+
+      <div class="carpeta cp11">
+        <img src="{% static 'icons/carpeta.png'%}" alt="">
+        <p class="descp">Equipos</p>
+      </div>
+
+      <div class="carpeta cp12">
+        <img src="{% static 'icons/carpeta.png'%}" alt="">
+        <p class="descp">Fabricantes</p>
+      </div>
+
+      <div class="carpeta cp13">
+        <img src="{% static 'icons/carpeta.png'%}" alt="">
+        <p class="descp">IA</p>
+      </div>
+
+      <div class="carpeta cp14">
+        <img src="{% static 'icons/carpeta.png'%}" alt="">
+        <p class="descp">Info</p>
+      </div>
+
+      <div class="carpeta cp15">
+        <img src="{% static 'icons/carpeta.png'%}" alt="">
+        <p class="descp">Comercio</p>
+      </div>
+
+      <div class="carpeta cp16">
+        <img src="{% static 'icons/carpeta.png'%}" alt="">
+        <p class="descp">ARI</p>
+      </div>
+
+      <div class="carpeta cp17">
+        <img src="{% static 'icons/carpeta.png'%}" alt="">
+        <p class="descp">IEA</p>
+      </div>
+
+      <div class="carpeta cp18">
+        <img src="{% static 'icons/carpeta.png'%}" alt="">
+        <p class="descp">APIs</p>
+      </div>
+
+      <div class="carpeta cp19">
+        <img src="{% static 'icons/carpeta.png'%}" alt="">
+        <p class="descp">Notas</p>
+      </div>
+
+      <div class="carpeta cp20">
+        <img src="{% static 'icons/carpeta.png'%}" alt="">
+        <p class="descp">Generales</p>
+      </div>
+
+      </section>
+    <section>
+        <h1> Seccion 2 Documentacion</h1>
+    </section>
+{%endblock%}
+
+{%block Calendario%}
+    <section>
+        <h1> Seccion 1 Calendario</h1>
+    </section>
+    <section>
+        <h1> Seccion 2 Calendario</h1>
+    </section>
+{%endblock%}
+
+
+
+{%block Control%}
+    <section>
+        <h1> Seccion 1 Control</h1>
+    </section>
+    <section>
+        <h1> Seccion 2 Control</h1>
+    </section>
+{%endblock%}
+
+{%block Salud%}
+<section>
+    <h1> Seccion 1 Salud</h1>
+</section>
+<section>
+    <h1> Seccion 2 Salud</h1>
+</section>
+{%endblock%}
+
+{%block Tools%}
+<section>
+    <h1> Seccion 1 Tools</h1>
+</section>
+<section>
+    <h1> Seccion 2 Tools</h1>
+</section>
+{%endblock%}
+
+{%block Chill%}
+    <section>
+        <h1> Seccion 1 Chill</h1>
+    </section>
+    <section>
+        <h1> Seccion 2 Chill</h1>
+    </section>
+{%endblock%}
+
+{%block Personal%}
+<section>
+    <h1> Seccion 1 Personal</h1>
+</section>
+<section>
+    <h1> Seccion 2 Personal</h1>
+</section>
+{%endblock%}
+
+{%block Creador%}
+<section>
+    <h1> Seccion 1 Creador</h1>
+</section>
+<section>
+    <h1> Seccion 2 Creador</h1>
+</section>
+{%endblock%}
+
+
+
+    <footer>
+      <p>&copy; 2024 XALLX Corporation. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="{% static 'js/script.js'%}"></script>
+</body>
+</html>
